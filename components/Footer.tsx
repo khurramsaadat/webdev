@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { FiGithub, FiTwitter, FiLinkedin, FiMail } from 'react-icons/fi';
+import { FiX, FiLinkedin, FiMail, FiHexagon } from 'react-icons/fi';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -10,18 +10,18 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="col-span-1 md:col-span-2">
-            <h3 className="text-2xl font-bold mb-4">Agency</h3>
+            <div className="flex items-center space-x-2 mb-4">
+              <FiHexagon className="w-6 h-6 stroke-[3] text-white animate-rotate-slow" />
+              <h3 className="text-2xl font-bold tracking-tight">CreativeTech</h3>
+            </div>
             <p className="text-gray-400 mb-4">
               We create beautiful and functional websites that help businesses grow and succeed in the digital world.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <FiGithub size={24} />
+              <a href="https://x.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
+                <FiX size={24} />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <FiTwitter size={24} />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a href="https://www.linkedin.com/in/khurramsaadat/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
                 <FiLinkedin size={24} />
               </a>
               <a href="mailto:khurram.saadat@yahoo.com" className="text-gray-400 hover:text-white transition-colors">
@@ -70,7 +70,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; {currentYear} Agency. All rights reserved.</p>
+          <p>&copy; {currentYear} CreativeTech. All rights reserved.</p>
         </div>
       </div>
     </footer>

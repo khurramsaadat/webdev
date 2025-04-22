@@ -2,8 +2,8 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { FiMenu, FiX } from 'react-icons/fi';
+import { motion, AnimatePresence } from 'framer-motion';
+import { FiMenu, FiX, FiHexagon } from 'react-icons/fi';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,13 +16,50 @@ const Navbar = () => {
     { name: 'Contact', href: '/contact' },
   ];
 
+  const menuVariants = {
+    closed: {
+      opacity: 0,
+      y: "-100%",
+      transition: {
+        duration: 0.3,
+        ease: "easeInOut"
+      }
+    },
+    open: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.3,
+        ease: "easeInOut"
+      }
+    }
+  };
+
+  const itemVariants = {
+    closed: { opacity: 0, y: 20 },
+    open: (i: number) => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: i * 0.1,
+        duration: 0.3,
+        ease: "easeOut"
+      }
+    })
+  };
+
   return (
     <nav className="fixed w-full bg-white shadow-md z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
-            <Link href="/" className="text-2xl font-bold text-primary">
-              Agency
+            <Link href="/" className="flex items-center space-x-2">
+              <div className="relative">
+                <FiHexagon className="w-6 h-6 stroke-[3] text-primary animate-gradient-x animate-rotate-slow" />
+              </div>
+              <span className="text-2xl font-bold tracking-tight bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent animate-gradient-x">
+                CreativeTech
+              </span>
             </Link>
           </div>
           
@@ -43,39 +80,80 @@ const Navbar = () => {
 
           {/* Mobile menu button */}
           <div className="md:hidden">
-            <button
+            <motion.button
               onClick={() => setIsOpen(!isOpen)}
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-primary focus:outline-none"
+              whileTap={{ scale: 0.95 }}
             >
-              {isOpen ? <FiX size={24} /> : <FiMenu size={24} />}
-            </button>
+              <AnimatePresence mode="wait">
+                {isOpen ? (
+                  <motion.div
+                    key="close"
+                    initial={{ rotate: -180, opacity: 0 }}
+                    animate={{ rotate: 0, opacity: 1 }}
+                    exit={{ rotate: 180, opacity: 0 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <FiX size={24} />
+                  </motion.div>
+                ) : (
+                  <motion.div
+                    key="menu"
+                    initial={{ rotate: 180, opacity: 0 }}
+                    animate={{ rotate: 0, opacity: 1 }}
+                    exit={{ rotate: -180, opacity: 0 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <FiMenu size={24} />
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </motion.button>
           </div>
         </div>
       </div>
 
       {/* Mobile Navigation */}
-      <motion.div
-        initial={false}
-        animate={isOpen ? 'open' : 'closed'}
-        variants={{
-          open: { opacity: 1, height: 'auto' },
-          closed: { opacity: 0, height: 0 },
-        }}
-        className="md:hidden"
-      >
-        <div className="px-2 pt-2 pb-3 space-y-1">
-          {navItems.map((item) => (
-            <Link
-              key={item.name}
-              href={item.href}
-              className="block text-gray-600 hover:text-primary px-3 py-2 rounded-md text-base font-medium"
-              onClick={() => setIsOpen(false)}
-            >
-              {item.name}
-            </Link>
-          ))}
-        </div>
-      </motion.div>
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial="closed"
+            animate="open"
+            exit="closed"
+            variants={menuVariants}
+            className="md:hidden absolute right-0 w-64 bg-white shadow-lg rounded-lg mt-2 py-2"
+          >
+            <div className="flex justify-end px-4 py-2">
+              <motion.button
+                onClick={() => setIsOpen(false)}
+                className="text-gray-600 hover:text-primary"
+                whileTap={{ scale: 0.95 }}
+              >
+                <FiX size={24} />
+              </motion.button>
+            </div>
+            <div className="px-4 py-2 space-y-2">
+              {navItems.map((item, i) => (
+                <motion.div
+                  key={item.name}
+                  custom={i}
+                  variants={itemVariants}
+                  initial="closed"
+                  animate="open"
+                >
+                  <Link
+                    href={item.href}
+                    className="block px-4 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 rounded-lg transition-colors"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {item.name}
+                  </Link>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
   );
 };

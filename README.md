@@ -13,8 +13,19 @@ A modern, responsive website for a digital agency built with Next.js, TypeScript
 - Responsive images with automatic sizing
 - Custom PexelsImage component for consistent image handling
 - Performance optimized with proper image compression
+- Animated mobile menu with dropdown panel
+- Gradient animations for logo
+- Interactive contact form
+- Google Maps integration
 
-## Getting Started
+## Latest Updates
+
+- Enhanced mobile menu with modern animations
+- Added gradient animation to logo
+- Improved map view in contact page
+- Removed Logos page from navigation
+- Added smooth transitions and hover effects
+- Optimized mobile responsiveness
 
 ## Image Optimization
 
@@ -32,35 +43,6 @@ Image variants available:
 - `grid2`: Two-column grid images
 - `grid4`: Four-column grid images
 
-## Project Structure
-
-```
-agency/
-├── app/                  # Next.js app directory
-│   ├── about/           # About page
-│   ├── contact/         # Contact page
-│   ├── portfolio/       # Portfolio page
-│   ├── services/        # Services page
-│   └── layout.tsx       # Root layout
-├── components/          # Reusable components
-│   ├── Navbar.tsx      # Navigation component
-│   ├── Footer.tsx      # Footer component
-│   ├── PexelsImage.tsx # Optimized image component
-│   └── Testimonials.tsx # Testimonials component
-├── public/             # Static assets
-├── styles/             # Global styles
-└── package.json        # Project dependencies
-```
-
-## Technologies Used
-
-- [Next.js](https://nextjs.org/) - React framework
-- [TypeScript](https://www.typescriptlang.org/) - Type safety
-- [Tailwind CSS](https://tailwindcss.com/) - Styling
-- [Framer Motion](https://www.framer.com/motion/) - Animations
-- [React Icons](https://react-icons.github.io/react-icons/) - Icons
-- [Pexels](https://www.pexels.com/) - High-quality stock images
-
 ## Performance Optimizations
 
 - Optimized image loading with next/image
@@ -69,3 +51,5 @@ agency/
 - Responsive image handling
 - Layout shift prevention
 - Efficient lazy loading for off-screen content
+- Smooth animations with Framer Motion
+- Optimized mobile menu performance
