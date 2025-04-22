@@ -26,6 +26,34 @@ A modern, responsive website for a digital agency built with Next.js, TypeScript
 - Removed Logos page from navigation
 - Added smooth transitions and hover effects
 - Optimized mobile responsiveness
+- Added Contact link to footer navigation
+
+## Project Structure
+
+```
+web-agency/
+├── app/
+│   ├── about/
+│   ├── contact/
+│   ├── portfolio/
+│   ├── services/
+│   ├── layout.tsx
+│   └── page.tsx
+├── components/
+│   ├── Footer.tsx
+│   ├── Navbar.tsx
+│   ├── PexelsImage.tsx
+│   └── common/
+│       ├── Button.tsx
+│       └── Section.tsx
+├── public/
+│   └── images/
+├── styles/
+│   └── globals.css
+├── tailwind.config.js
+├── tsconfig.json
+└── package.json
+```
 
 ## Image Optimization
 
