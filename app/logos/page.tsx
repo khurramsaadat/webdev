@@ -83,7 +83,7 @@ export default function Logos() {
   return (
     <div className="pb-20">
       {/* Header Section with Background */}
-      <div className="relative h-[300px] mb-16">
+      <div className="relative h-[50vh] mb-16">
         <Image
           src="https://images.pexels.com/photos/3183153/pexels-photo-3183153.jpeg"
           alt="Logo design concepts"

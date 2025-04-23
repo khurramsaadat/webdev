@@ -16,17 +16,17 @@ module.exports = {
         sans: ['Inter', 'sans-serif'],
       },
       animation: {
-        'fade-in': 'fadeIn 0.5s ease-in-out',
-        'slide-up': 'slideUp 0.5s ease-in-out',
+        'fade-in': 'fade-in 0.5s ease-out',
+        'slide-up': 'slide-up 0.5s ease-out',
         'gradient-x': 'gradient-x 3s ease infinite',
-        'rotate-slow': 'rotate 20s linear infinite',
+        'carousel': 'carousel 30s linear infinite',
       },
       keyframes: {
-        fadeIn: {
+        'fade-in': {
           '0%': { opacity: '0' },
           '100%': { opacity: '1' },
         },
-        slideUp: {
+        'slide-up': {
           '0%': { transform: 'translateY(20px)', opacity: '0' },
           '100%': { transform: 'translateY(0)', opacity: '1' },
         },
@@ -40,9 +40,9 @@ module.exports = {
             'background-position': 'right center',
           },
         },
-        rotate: {
-          '0%': { transform: 'rotate(0deg)' },
-          '100%': { transform: 'rotate(360deg)' },
+        'carousel': {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' },
         },
       },
     },

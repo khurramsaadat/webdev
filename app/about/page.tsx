@@ -1,32 +1,33 @@
 'use client';
 
 import React from 'react';
-import Image from 'next/image';
 import { motion } from 'framer-motion';
+import OptimizedImage from '@/components/OptimizedImage';
+import PexelsImage from '@/components/PexelsImage';
 
 const team = [
   {
     name: 'John Doe',
     role: 'CEO & Founder',
-    image: 'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=400',
+    image: '/images/team/john-doe.jpg',
     description: 'With over 15 years of experience in web development and digital strategy.',
   },
   {
     name: 'Jane Smith',
     role: 'Creative Director',
-    image: 'https://images.pexels.com/photos/3796217/pexels-photo-3796217.jpeg?auto=compress&cs=tinysrgb&w=400',
+    image: '/images/team/jane-smith.jpg',
     description: 'Passionate about creating beautiful and functional user experiences.',
   },
   {
     name: 'Mike Johnson',
     role: 'Lead Developer',
-    image: 'https://images.pexels.com/photos/4195342/pexels-photo-4195342.jpeg?auto=compress&cs=tinysrgb&w=400',
+    image: '/images/team/mike-johnson.jpg',
     description: 'Expert in modern web technologies and application architecture.',
   },
   {
     name: 'Sarah Williams',
     role: 'UX Designer',
-    image: 'https://images.pexels.com/photos/3756679/pexels-photo-3756679.jpeg?auto=compress&cs=tinysrgb&w=400',
+    image: '/images/team/sarah-williams.jpg',
     description: 'Specialized in user research and interface design.',
   },
 ];
@@ -35,27 +36,28 @@ export default function About() {
   return (
     <div className="pb-20">
       {/* Header Section with Background */}
-      <div className="relative h-[300px] mb-16">
-        <Image
-          src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1200"
-          alt="Our team collaboration"
-          fill
-          sizes="100vw"
-          className="object-cover"
-          priority
-        />
-        <div className="absolute inset-0 bg-black bg-opacity-60" />
+      <section className="relative h-[50vh] flex items-center justify-center">
+        <div className="absolute inset-0 z-0">
+          <div className="relative w-full h-full">
+            <PexelsImage
+              src="/images/hero/team-collaboration-2.jpg"
+              alt="Our team collaboration"
+              variant="hero"
+              priority
+            />
+          </div>
+          <div className="absolute inset-0 bg-black bg-opacity-60" />
+        </div>
         <div className="relative z-10 h-full flex flex-col items-center justify-center text-white px-4">
           <h1 className="section-title text-white mb-4">Our Story</h1>
           <p className="section-subtitle text-gray-200 max-w-2xl">
             We are a team of passionate professionals dedicated to creating exceptional digital experiences.
           </p>
         </div>
-      </div>
+      </section>
+      <div className="mb-16" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-20">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -85,12 +87,11 @@ export default function About() {
             viewport={{ once: true }}
             className="relative h-96"
           >
-            <Image
-              src="https://images.pexels.com/photos/7688460/pexels-photo-7688460.jpeg?auto=compress&cs=tinysrgb&w=800"
+            <OptimizedImage
+              src="/images/about/office-space.jpg"
               alt="Our modern office space"
-              fill
-              sizes="(min-width: 768px) 50vw, 100vw"
-              className="object-cover rounded-lg"
+              variant="background"
+              className="rounded-lg"
             />
           </motion.div>
         </div>
@@ -114,12 +115,11 @@ export default function About() {
               className="bg-white p-6 rounded-lg shadow-lg"
             >
               <div className="relative h-48 mb-4">
-                <Image
+                <OptimizedImage
                   src={member.image}
                   alt={member.name}
-                  fill
-                  sizes="(min-width: 1024px) 25vw, (min-width: 768px) 50vw, 100vw"
-                  className="object-cover rounded-lg"
+                  variant="team"
+                  className="rounded-lg"
                 />
               </div>
               <h3 className="text-xl font-semibold mb-2">{member.name}</h3>

@@ -1,34 +1,20 @@
-# Agency Website
+# CreativeTech - Digital Solutions
 
-A modern, responsive website for a digital agency built with Next.js, TypeScript, and Tailwind CSS.
+A modern web agency website built with Next.js, TypeScript, and Tailwind CSS.
 
-## Features
+## 🚀 Features
 
 - Modern and responsive design
+- Optimized images with next/image
 - Smooth animations with Framer Motion
-- TypeScript for type safety
-- Tailwind CSS for styling
-- Next.js for optimal performance
-- Optimized image loading with next/image
-- Responsive images with automatic sizing
-- Custom PexelsImage component for consistent image handling
-- Performance optimized with proper image compression
-- Animated mobile menu with dropdown panel
-- Gradient animations for logo
-- Interactive contact form
-- Google Maps integration
+- Client logo carousel
+- Testimonials section
+- Portfolio showcase
+- Contact form
+- SEO optimized
+- Mobile-first approach
 
-## Latest Updates
-
-- Enhanced mobile menu with modern animations
-- Added gradient animation to logo
-- Improved map view in contact page
-- Removed Logos page from navigation
-- Added smooth transitions and hover effects
-- Optimized mobile responsiveness
-- Added Contact link to footer navigation
-
-## Project Structure
+## 📁 Project Structure
 
 ```
 web-agency/
@@ -37,47 +23,90 @@ web-agency/
 │   ├── contact/
 │   ├── portfolio/
 │   ├── services/
+│   ├── globals.css
 │   ├── layout.tsx
 │   └── page.tsx
 ├── components/
 │   ├── Footer.tsx
 │   ├── Navbar.tsx
+│   ├── OptimizedImage.tsx
 │   ├── PexelsImage.tsx
-│   └── common/
-│       ├── Button.tsx
-│       └── Section.tsx
+│   └── Testimonials.tsx
 ├── public/
-│   └── images/
+│   ├── images/
+│   │   ├── about/
+│   │   ├── clients/
+│   │   ├── hero/
+│   │   ├── projects/
+│   │   ├── team/
+│   │   └── testimonials/
+│   ├── favicon-16x16.ico
+│   ├── favicon-32x32.ico
+│   ├── favicon-16x16.png
+│   ├── favicon-32x32.png
+│   └── apple-touch-icon.png
 ├── styles/
 │   └── globals.css
+├── package.json
+├── next.config.js
 ├── tailwind.config.js
 ├── tsconfig.json
-└── package.json
+└── README.md
 ```
 
-## Image Optimization
+## 🛠️ Latest Updates
 
-The project uses a custom `PexelsImage` component that handles:
+- Added client logo carousel with smooth animation
+- Implemented favicon support for multiple sizes and formats
+- Fixed duplicate key issue in client logos
+- Added gradient animation to the CreativeTech logo
+- Updated social media links in footer
+- Optimized image loading and performance
 
-- Automatic image sizing based on usage context
-- Proper aspect ratio maintenance
-- Responsive image loading
-- Image compression and optimization
-- Priority loading for above-the-fold content
+## 🔧 Installation
 
-Image variants available:
-- `hero`: Full-width hero images (16:9 aspect ratio)
-- `card`: Card-style images (4:3 aspect ratio)
-- `grid2`: Two-column grid images
-- `grid4`: Four-column grid images
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/web-agency.git
+```
 
-## Performance Optimizations
+2. Install dependencies:
+```bash
+cd web-agency
+npm install
+```
 
-- Optimized image loading with next/image
-- Proper image sizing and compression
-- Priority loading for above-the-fold content
-- Responsive image handling
-- Layout shift prevention
-- Efficient lazy loading for off-screen content
-- Smooth animations with Framer Motion
-- Optimized mobile menu performance
+3. Run the development server:
+```bash
+npm run dev
+```
+
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## 🎨 Technologies Used
+
+- [Next.js 14](https://nextjs.org/)
+- [React 18](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Framer Motion](https://www.framer.com/motion/)
+
+## 📝 Environment Variables
+
+Create a `.env.local` file in the root directory and add the following variables:
+
+```env
+NEXT_PUBLIC_SITE_URL=http://localhost:3000
+```
+
+## 🌟 Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

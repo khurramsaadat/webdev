@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import Testimonials from '@/components/Testimonials';
 import PexelsImage from '@/components/PexelsImage';
+import OptimizedImage from '@/components/OptimizedImage';
 
 export default function Home() {
   const services = [
@@ -23,36 +24,88 @@ export default function Home() {
       description: 'Native and cross-platform mobile applications for iOS and Android.',
       icon: '📱',
     },
+    {
+      title: 'Social Media',
+      description: 'Strategic social media management and content creation to boost your online presence.',
+      icon: '📱',
+    },
+    {
+      title: 'eCommerce',
+      description: 'Custom e-commerce solutions with secure payment gateways and inventory management.',
+      icon: '🛍️',
+    },
+    {
+      title: 'Motion Graphics',
+      description: 'Engaging motion graphics and animations to bring your brand to life.',
+      icon: '🎬',
+    },
   ];
 
   const projects = [
     {
       title: 'E-commerce Platform',
       description: 'A modern e-commerce platform with advanced features and seamless user experience.',
-      image: 'https://images.pexels.com/photos/18073372/pexels-photo-18073372.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: '/images/projects/ecommerce-platform.jpg',
       tags: ['Web Development', 'UI/UX Design'],
       link: '#',
     },
     {
       title: 'Mobile Banking App',
       description: 'A secure and user-friendly mobile banking application for iOS and Android.',
-      image: 'https://images.pexels.com/photos/6347919/pexels-photo-6347919.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: '/images/projects/mobile-banking.jpg',
       tags: ['Mobile App', 'UI/UX Design'],
       link: '#',
     },
     {
       title: 'Corporate Website',
       description: 'A responsive corporate website with modern design and performance optimization.',
-      image: 'https://images.pexels.com/photos/3182773/pexels-photo-3182773.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: '/images/projects/corporate-website.jpg',
       tags: ['Web Development', 'UI/UX Design'],
       link: '#',
     },
     {
       title: 'Food Delivery App',
       description: 'A food delivery application with real-time tracking and payment integration.',
-      image: 'https://images.pexels.com/photos/6963098/pexels-photo-6963098.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: '/images/projects/food-delivery.jpg',
       tags: ['Mobile App', 'UI/UX Design'],
       link: '#',
+    },
+  ];
+
+  const clients = [
+    {
+      name: 'Tesla',
+      logo: '/images/clients/Tesla_Motors.svg.png',
+    },
+    {
+      name: 'Lego',
+      logo: '/images/clients/brand-lego.svg',
+    },
+    {
+      name: 'McDonalds',
+      logo: '/images/clients/Mcd.png',
+      id: 'mcdonalds-1',
+    },
+    {
+      name: 'Apple',
+      logo: '/images/clients/apple-14.svg',
+    },
+    {
+      name: 'New Balance',
+      logo: '/images/clients/nb-logo.svg',
+    },
+    {
+      name: 'Nike',
+      logo: '/images/clients/nike-logo.svg',
+    },
+    {
+      name: 'McDonalds',
+      logo: '/images/clients/McDonalds_Logo.png',
+      id: 'mcdonalds-2',
+    },
+    {
+      name: 'Client',
+      logo: '/images/clients/logo-0.png',
     },
   ];
 
@@ -63,7 +116,7 @@ export default function Home() {
         <div className="absolute inset-0 z-0">
           <div className="relative w-full h-full">
             <PexelsImage
-              src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg"
+              src="/images/hero/team-collaboration.jpg"
               alt="Team collaboration in modern office"
               variant="hero"
               priority
@@ -116,7 +169,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <motion.div
                 key={service.title}
@@ -150,9 +203,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* Testimonials Section */}
-      <Testimonials />
 
       {/* Portfolio Section */}
       <section className="py-20 bg-white">
@@ -233,6 +283,52 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Clients Section */}
+      <section className="py-20 bg-gray-50 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="section-title">Our Clients</h2>
+            <p className="section-subtitle">
+              Trusted by leading brands and innovative companies worldwide.
+            </p>
+          </div>
+          <div className="relative">
+            <div className="flex animate-carousel">
+              {clients.map((client) => (
+                <motion.div
+                  key={client.id || client.name}
+                  className="w-20 h-20 mx-12 relative flex-shrink-0"
+                >
+                  <OptimizedImage
+                    src={client.logo}
+                    alt={`${client.name} logo`}
+                    variant="client"
+                    className="w-full h-full filter grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </motion.div>
+              ))}
+              {/* Duplicate logos for seamless loop */}
+              {clients.map((client) => (
+                <motion.div
+                  key={`${client.id || client.name}-duplicate`}
+                  className="w-20 h-20 mx-12 relative flex-shrink-0"
+                >
+                  <OptimizedImage
+                    src={client.logo}
+                    alt={`${client.name} logo`}
+                    variant="client"
+                    className="w-full h-full filter grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <Testimonials />
     </div>
   );
 } 

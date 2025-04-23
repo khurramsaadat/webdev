@@ -3,7 +3,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FiMail, FiPhone, FiMapPin } from 'react-icons/fi';
-import Image from 'next/image';
+import OptimizedImage from '@/components/OptimizedImage';
+import PexelsImage from '@/components/PexelsImage';
 
 export default function Contact() {
   const [formData, setFormData] = React.useState({
@@ -29,23 +30,26 @@ export default function Contact() {
   return (
     <div className="pb-20">
       {/* Header Section with Background */}
-      <div className="relative h-[300px] mb-16">
-        <Image
-          src="https://images.pexels.com/photos/3182833/pexels-photo-3182833.jpeg"
-          alt="Contact us background"
-          fill
-          sizes="100vw"
-          className="object-cover"
-          priority
-        />
-        <div className="absolute inset-0 bg-black bg-opacity-60" />
+      <section className="relative h-[50vh] flex items-center justify-center">
+        <div className="absolute inset-0 z-0">
+          <div className="relative w-full h-full">
+            <PexelsImage
+              src="/images/hero/contact-us.jpg"
+              alt="Contact us background"
+              variant="hero"
+              priority
+            />
+          </div>
+          <div className="absolute inset-0 bg-black bg-opacity-60" />
+        </div>
         <div className="relative z-10 h-full flex flex-col items-center justify-center text-white px-4">
           <h1 className="section-title text-white mb-4">Contact Us</h1>
           <p className="section-subtitle text-gray-200 max-w-2xl">
             Have a project in mind? Get in touch with us and let's create something amazing together.
           </p>
         </div>
-      </div>
+      </section>
+      <div className="mb-16" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">

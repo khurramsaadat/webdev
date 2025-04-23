@@ -2,26 +2,26 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import Image from 'next/image';
+import OptimizedImage from './OptimizedImage';
 
 const testimonials = [
   {
     name: 'Sarah Johnson',
-    role: 'CEO, TechStart',
-    image: 'https://images.pexels.com/photos/3760263/pexels-photo-3760263.jpeg?auto=compress&cs=tinysrgb&w=200',
-    content: 'Working with this agency was a game-changer for our business. Their expertise in web development helped us create a stunning online presence that truly represents our brand.',
+    role: 'CEO at TechStart',
+    text: 'Working with CreativeTech has been an absolute pleasure. Their team delivered a stunning website that perfectly captures our brand essence.',
+    image: '/images/testimonials/sarah-johnson.jpg',
   },
   {
     name: 'Michael Chen',
-    role: 'Marketing Director, GrowthCo',
-    image: 'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=200',
-    content: 'The team delivered exceptional results. Their attention to detail and commitment to quality is unmatched. Our website traffic has increased by 200% since the launch.',
+    role: 'Marketing Director',
+    text: 'The attention to detail and creative solutions provided by CreativeTech helped us increase our online conversions by 150%.',
+    image: '/images/testimonials/michael-chen.jpg',
   },
   {
     name: 'Emily Rodriguez',
-    role: 'Founder, CreativeMinds',
-    image: 'https://images.pexels.com/photos/3756679/pexels-photo-3756679.jpeg?auto=compress&cs=tinysrgb&w=200',
-    content: 'I was impressed by their professionalism and creativity. They understood our vision perfectly and brought it to life with a beautiful, functional website.',
+    role: 'Startup Founder',
+    text: 'From concept to execution, CreativeTech exceeded our expectations. Their expertise in UI/UX design is unmatched.',
+    image: '/images/testimonials/emily-rodriguez.jpg',
   },
 ];
 
@@ -48,13 +48,10 @@ const Testimonials = () => {
             >
               <div className="flex items-center gap-4 mb-6">
                 <div className="relative w-16 h-16 rounded-full overflow-hidden">
-                  <Image
+                  <OptimizedImage
                     src={testimonial.image}
                     alt={testimonial.name}
-                    width={64}
-                    height={64}
-                    className="object-cover"
-                    sizes="64px"
+                    variant="testimonial"
                   />
                 </div>
                 <div>
@@ -62,7 +59,7 @@ const Testimonials = () => {
                   <p className="text-gray-600">{testimonial.role}</p>
                 </div>
               </div>
-              <p className="text-gray-600 italic">"{testimonial.content}"</p>
+              <p className="text-gray-600 italic">"{testimonial.text}"</p>
             </motion.div>
           ))}
         </div>
