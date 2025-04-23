@@ -6,13 +6,15 @@ import OptimizedImage from './OptimizedImage';
 
 const testimonials = [
   {
-    name: 'Sarah Johnson',
+    id: 1,
+    name: "Roberts O'Neill",
     role: 'CEO at TechStart',
     text: 'Working with CreativeTech has been an absolute pleasure. Their team delivered a stunning website that perfectly captures our brand essence.',
     image: '/images/testimonials/sarah-johnson.jpg',
   },
   {
-    name: 'Michael Chen',
+    id: 2,
+    name: 'Mohib Ali',
     role: 'Marketing Director',
     text: 'The attention to detail and creative solutions provided by CreativeTech helped us increase our online conversions by 150%.',
     image: '/images/testimonials/michael-chen.jpg',

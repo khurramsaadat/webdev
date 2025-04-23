@@ -76,37 +76,62 @@ export default function Home() {
     {
       name: 'Tesla',
       logo: '/images/clients/Tesla_Motors.svg.png',
+      className: 'scale-75'
+    },
+    {
+      name: 'Sony',
+      logo: '/images/clients/sony-black.png',
+      className: 'w-auto h-[45px] object-contain'
     },
     {
       name: 'Lego',
       logo: '/images/clients/brand-lego.svg',
+      className: 'scale-75'
     },
     {
       name: 'McDonalds',
       logo: '/images/clients/Mcd.png',
       id: 'mcdonalds-1',
+      className: 'scale-125'
     },
     {
       name: 'Apple',
       logo: '/images/clients/apple-14.svg',
+      className: 'w-auto h-[40px] object-contain'
     },
     {
       name: 'New Balance',
-      logo: '/images/clients/nb-logo.svg',
+      logo: '/images/clients/nb-logo.svg'
     },
     {
       name: 'Nike',
-      logo: '/images/clients/nike-logo.svg',
+      logo: '/images/clients/nike-logo.svg'
     },
     {
-      name: 'McDonalds',
-      logo: '/images/clients/McDonalds_Logo.png',
-      id: 'mcdonalds-2',
+      name: 'Mercedes-Benz',
+      logo: '/images/clients/mb-star-svg.svg',
+      id: 'mercedes-1'
     },
     {
-      name: 'Client',
-      logo: '/images/clients/logo-0.png',
+      name: 'Lexus',
+      logo: '/images/clients/lexus.png',
+      className: 'scale-90'
     },
+    {
+      name: 'LOreal',
+      logo: '/images/clients/LOreal.png',
+      className: 'scale-85'
+    },
+    {
+      name: 'Nestle',
+      logo: '/images/clients/nestle.png',
+      className: 'scale-80'
+    },
+    {
+      name: 'Canon',
+      logo: '/images/clients/canon-logo-red.svg',
+      className: 'scale-85'
+    }
   ];
 
   return (
@@ -294,17 +319,17 @@ export default function Home() {
             </p>
           </div>
           <div className="relative">
-            <div className="flex animate-carousel">
+            <div className="flex animate-carousel-mobile md:animate-carousel">
               {clients.map((client) => (
                 <motion.div
                   key={client.id || client.name}
-                  className="w-20 h-20 mx-12 relative flex-shrink-0"
+                  className="w-[100px] h-[70px] mx-6 relative flex-shrink-0 flex items-center justify-center"
                 >
                   <OptimizedImage
                     src={client.logo}
                     alt={`${client.name} logo`}
                     variant="client"
-                    className="w-full h-full filter grayscale hover:grayscale-0 transition-all duration-300"
+                    className={`w-auto h-full object-contain ${client.className || ''}`}
                   />
                 </motion.div>
               ))}
@@ -312,13 +337,13 @@ export default function Home() {
               {clients.map((client) => (
                 <motion.div
                   key={`${client.id || client.name}-duplicate`}
-                  className="w-20 h-20 mx-12 relative flex-shrink-0"
+                  className="w-[100px] h-[70px] mx-6 relative flex-shrink-0 flex items-center justify-center"
                 >
                   <OptimizedImage
                     src={client.logo}
                     alt={`${client.name} logo`}
                     variant="client"
-                    className="w-full h-full filter grayscale hover:grayscale-0 transition-all duration-300"
+                    className={`w-auto h-full object-contain ${client.className || ''}`}
                   />
                 </motion.div>
               ))}

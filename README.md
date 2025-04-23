@@ -1,69 +1,67 @@
-# CreativeTech - Digital Solutions
+# CreativeTech Web Agency
 
-A modern web agency website built with Next.js, TypeScript, and Tailwind CSS.
+A modern, responsive website for a creative technology agency built with Next.js, TypeScript, and Tailwind CSS.
 
-## 🚀 Features
+## Recent Updates
 
-- Modern and responsive design
-- Optimized images with next/image
+- Updated client carousel with optimized logo display and consistent section width
+- Modified testimonial names while preserving original content and images
+- Adjusted carousel animation speeds for better mobile and desktop experience
+- Enhanced logo sizing and spacing in the clients section
+
+## Project Structure
+
+```
+web-agency/
+├── .next/                 # Next.js build output
+├── app/                   # Next.js 13+ app directory
+│   ├── about/            # About page
+│   ├── contact/          # Contact page
+│   ├── portfolio/        # Portfolio page
+│   └── page.tsx          # Home page
+├── components/           # Reusable React components
+│   ├── Footer.tsx
+│   ├── Navbar.tsx
+│   ├── OptimizedImage.tsx
+│   ├── PexelsImage.tsx
+│   └── Testimonials.tsx
+├── public/              # Static assets
+│   ├── images/
+│   │   ├── clients/    # Client logos
+│   │   ├── hero/       # Hero section images
+│   │   ├── projects/   # Portfolio images
+│   │   └── testimonials/ # Testimonial profile images
+├── scripts/            # Utility scripts
+├── styles/            # Global styles
+├── .gitignore
+├── next.config.js     # Next.js configuration
+├── package.json       # Project dependencies
+├── postcss.config.js  # PostCSS configuration
+├── tailwind.config.js # Tailwind CSS configuration
+└── tsconfig.json     # TypeScript configuration
+```
+
+## Features
+
+- Modern, responsive design
+- Optimized image loading with next/image
 - Smooth animations with Framer Motion
 - Client logo carousel
 - Testimonials section
 - Portfolio showcase
 - Contact form
 - SEO optimized
-- Mobile-first approach
 
-## 📁 Project Structure
+## Tech Stack
 
-```
-web-agency/
-├── app/
-│   ├── about/
-│   ├── contact/
-│   ├── portfolio/
-│   ├── services/
-│   ├── globals.css
-│   ├── layout.tsx
-│   └── page.tsx
-├── components/
-│   ├── Footer.tsx
-│   ├── Navbar.tsx
-│   ├── OptimizedImage.tsx
-│   ├── PexelsImage.tsx
-│   └── Testimonials.tsx
-├── public/
-│   ├── images/
-│   │   ├── about/
-│   │   ├── clients/
-│   │   ├── hero/
-│   │   ├── projects/
-│   │   ├── team/
-│   │   └── testimonials/
-│   ├── favicon-16x16.ico
-│   ├── favicon-32x32.ico
-│   ├── favicon-16x16.png
-│   ├── favicon-32x32.png
-│   └── apple-touch-icon.png
-├── styles/
-│   └── globals.css
-├── package.json
-├── next.config.js
-├── tailwind.config.js
-├── tsconfig.json
-└── README.md
-```
+- Next.js 13+
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+- ESLint
+- PostCSS
 
-## 🛠️ Latest Updates
-
-- Added client logo carousel with smooth animation
-- Implemented favicon support for multiple sizes and formats
-- Fixed duplicate key issue in client logos
-- Added gradient animation to the CreativeTech logo
-- Updated social media links in footer
-- Optimized image loading and performance
-
-## 🔧 Installation
+## Getting Started
 
 1. Clone the repository:
 ```bash
@@ -79,34 +77,3 @@ npm install
 3. Run the development server:
 ```bash
 npm run dev
-```
-
-4. Open [http://localhost:3000](http://localhost:3000) in your browser.
-
-## 🎨 Technologies Used
-
-- [Next.js 14](https://nextjs.org/)
-- [React 18](https://reactjs.org/)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Framer Motion](https://www.framer.com/motion/)
-
-## 📝 Environment Variables
-
-Create a `.env.local` file in the root directory and add the following variables:
-
-```env
-NEXT_PUBLIC_SITE_URL=http://localhost:3000
-```
-
-## 🌟 Contributing
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

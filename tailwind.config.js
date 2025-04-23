@@ -19,7 +19,8 @@ module.exports = {
         'fade-in': 'fade-in 0.5s ease-out',
         'slide-up': 'slide-up 0.5s ease-out',
         'gradient-x': 'gradient-x 3s ease infinite',
-        'carousel': 'carousel 30s linear infinite',
+        'carousel': 'carousel 8s linear infinite',
+        'carousel-mobile': 'carousel 6s linear infinite',
         'rotate-slow': 'rotate 20s linear infinite',
       },
       keyframes: {
