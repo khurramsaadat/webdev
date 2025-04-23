@@ -4,8 +4,9 @@ import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import Testimonials from '@/components/Testimonials';
-import PexelsImage from '@/components/PexelsImage';
+import PexelsImage from '../components/PexelsImage';
 import OptimizedImage from '@/components/OptimizedImage';
+import PortfolioSection from '@/components/PortfolioSection';
 
 export default function Home() {
   const services = [
@@ -43,11 +44,12 @@ export default function Home() {
 
   const projects = [
     {
-      title: 'E-commerce Platform',
-      description: 'A modern e-commerce platform with advanced features and seamless user experience.',
+      id: 'fashion-house',
+      title: 'Fashion House E-commerce',
+      description: 'A modern fashion e-commerce platform featuring curated collections of men\'s and women\'s clothing, with a clean UI, newsletter integration, and responsive design.',
+      tags: ['E-commerce', 'Web Development', 'UI/UX Design'],
+      link: 'https://myfashionhouse.netlify.app/',
       image: '/images/projects/ecommerce-platform.jpg',
-      tags: ['Web Development', 'UI/UX Design'],
-      link: '#',
     },
     {
       title: 'Mobile Banking App',
@@ -230,84 +232,7 @@ export default function Home() {
       </section>
 
       {/* Portfolio Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="section-title">Our Portfolio</h2>
-            <p className="section-subtitle">
-              Take a look at some of our recent projects and see how we've helped our clients succeed.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {projects.map((project, index) => (
-              <motion.div
-                key={project.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                whileHover={{ 
-                  scale: 1.02,
-                  boxShadow: "0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)"
-                }}
-                transition={{ 
-                  duration: 0.5, 
-                  delay: index * 0.1,
-                  type: "spring",
-                  stiffness: 300,
-                  damping: 20
-                }}
-                viewport={{ once: true }}
-                className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300"
-              >
-                <motion.div 
-                  className="relative h-64"
-                  whileHover={{ scale: 1.05 }}
-                  transition={{ type: "spring", stiffness: 300 }}
-                >
-                  <div className="relative w-full h-full">
-                    <PexelsImage
-                      src={project.image}
-                      alt={project.title}
-                      variant="grid2"
-                      priority={index === 0}
-                      style={{ width: '100%', height: '100%' }}
-                    />
-                  </div>
-                </motion.div>
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-                  <p className="text-gray-600 mb-4">{project.description}</p>
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {project.tags.map((tag) => (
-                      <motion.span
-                        key={tag}
-                        whileHover={{ scale: 1.05 }}
-                        transition={{ type: "spring", stiffness: 300 }}
-                        className="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm"
-                      >
-                        {tag}
-                      </motion.span>
-                    ))}
-                  </div>
-                  <motion.a
-                    href={project.link}
-                    className="text-primary hover:text-secondary font-medium inline-flex items-center gap-2"
-                    whileHover={{ x: 5 }}
-                    transition={{ type: "spring", stiffness: 300 }}
-                  >
-                    View Project
-                    <motion.span
-                      animate={{ x: [0, 5, 0] }}
-                      transition={{ repeat: Infinity, duration: 1.5 }}
-                    >
-                      →
-                    </motion.span>
-                  </motion.a>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <PortfolioSection />
 
       {/* Clients Section */}
       <section className="py-20 bg-gray-50 overflow-hidden">
