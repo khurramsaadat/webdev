@@ -47,11 +47,12 @@ const Testimonials = () => {
               className="bg-white p-8 rounded-lg shadow-lg"
             >
               <div className="flex items-center gap-4 mb-6">
-                <div className="relative w-16 h-16 rounded-full overflow-hidden">
+                <div className="relative w-16 h-16 rounded-full overflow-hidden flex-shrink-0">
                   <OptimizedImage
                     src={testimonial.image}
                     alt={testimonial.name}
                     variant="testimonial"
+                    className="w-full h-full object-cover"
                   />
                 </div>
                 <div>

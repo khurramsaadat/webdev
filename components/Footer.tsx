@@ -1,8 +1,20 @@
 import Link from 'next/link';
-import { FiX, FiLinkedin, FiMail, FiHexagon } from 'react-icons/fi';
+import { FiX, FiLinkedin, FiMail, FiHexagon, FiYoutube, FiInstagram } from 'react-icons/fi';
+import { FaFacebookF, FaPinterestP, FaTiktok } from 'react-icons/fa';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+
+  const socialLinks = [
+    { icon: FiX, href: 'https://x.com', label: 'X (Twitter)' },
+    { icon: FaFacebookF, href: 'https://facebook.com', label: 'Facebook' },
+    { icon: FiInstagram, href: 'https://instagram.com', label: 'Instagram' },
+    { icon: FiYoutube, href: 'https://youtube.com', label: 'YouTube' },
+    { icon: FaPinterestP, href: 'https://pinterest.com', label: 'Pinterest' },
+    { icon: FaTiktok, href: 'https://tiktok.com', label: 'TikTok' },
+    { icon: FiLinkedin, href: 'https://www.linkedin.com/in/khurramsaadat/', label: 'LinkedIn' },
+    { icon: FiMail, href: 'mailto:khurram.saadat@yahoo.com', label: 'Email' },
+  ];
 
   return (
     <footer className="bg-gray-900 text-white">
@@ -17,16 +29,19 @@ const Footer = () => {
             <p className="text-gray-400 mb-4">
               We create beautiful and functional websites that help businesses grow and succeed in the digital world.
             </p>
-            <div className="flex space-x-4">
-              <a href="https://x.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
-                <FiX size={24} />
-              </a>
-              <a href="https://www.linkedin.com/in/khurramsaadat/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
-                <FiLinkedin size={24} />
-              </a>
-              <a href="mailto:khurram.saadat@yahoo.com" className="text-gray-400 hover:text-white transition-colors">
-                <FiMail size={24} />
-              </a>
+            <div className="flex flex-wrap gap-4">
+              {socialLinks.map((social) => (
+                <a
+                  key={social.label}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white transition-colors"
+                  aria-label={social.label}
+                >
+                  <social.icon size={24} />
+                </a>
+              ))}
             </div>
           </div>
 

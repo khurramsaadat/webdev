@@ -3,7 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import OptimizedImage from '@/components/OptimizedImage';
-import PexelsImage from '@/components/PexelsImage';
+import PexelsImage from '../../components/PexelsImage';
 
 const team = [
   {
@@ -49,9 +49,9 @@ export default function About() {
           <div className="absolute inset-0 bg-black bg-opacity-60" />
         </div>
         <div className="relative z-10 h-full flex flex-col items-center justify-center text-white px-4">
-          <h1 className="section-title text-white mb-4">Our Story</h1>
-          <p className="section-subtitle text-gray-200 max-w-2xl">
-            We are a team of passionate professionals dedicated to creating exceptional digital experiences.
+          <h1 className="section-title text-white mb-4">About Us</h1>
+          <p className="section-subtitle text-gray-200 max-w-2xl text-center">
+            Welcome to CreativeTech. We are a team of passionate professionals dedicated to creating exceptional digital experiences.
           </p>
         </div>
       </section>
@@ -65,18 +65,19 @@ export default function About() {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-2xl font-semibold mb-6">Our Mission</h2>
+            <div className="mb-12">
+              <h2 className="text-2xl font-semibold mb-6">Our Mission</h2>
+              <p className="text-gray-600">
+                At CreativeTech, we transform digital visions into exceptional realities. We deliver cutting-edge web development, mobile applications, and UI/UX design solutions that drive business growth. Through technical excellence and creative innovation, we help businesses build meaningful connections with their audience while exceeding expectations at every step.
+              </p>
+            </div>
+
+            <h2 className="text-2xl font-semibold mb-6">Our Vision & Values</h2>
             <p className="text-gray-600 mb-4">
-              Our mission is to help businesses thrive in the digital world by creating
-              beautiful, functional, and user-friendly websites and applications.
-            </p>
-            <p className="text-gray-600 mb-4">
-              We believe in the power of technology to transform businesses and create
-              meaningful connections with customers.
+              We envision a digital landscape where every business thrives through innovative technology solutions. Our core values of creativity, integrity, and client success guide everything we do.
             </p>
             <p className="text-gray-600">
-              Our team of experts works closely with clients to understand their needs
-              and deliver solutions that exceed expectations.
+              Through continuous learning and attention to detail, we deliver high-quality solutions while staying ahead of industry trends and technological advancements.
             </p>
           </motion.div>
 
@@ -92,6 +93,7 @@ export default function About() {
               alt="Our modern office space"
               variant="background"
               className="rounded-lg"
+              priority={true}
             />
           </motion.div>
         </div>

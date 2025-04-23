@@ -20,6 +20,7 @@ module.exports = {
         'slide-up': 'slide-up 0.5s ease-out',
         'gradient-x': 'gradient-x 3s ease infinite',
         'carousel': 'carousel 30s linear infinite',
+        'rotate-slow': 'rotate 20s linear infinite',
       },
       keyframes: {
         'fade-in': {
@@ -43,6 +44,10 @@ module.exports = {
         'carousel': {
           '0%': { transform: 'translateX(0)' },
           '100%': { transform: 'translateX(-50%)' },
+        },
+        'rotate': {
+          '0%': { transform: 'rotate(0deg)' },
+          '100%': { transform: 'rotate(360deg)' },
         },
       },
     },
