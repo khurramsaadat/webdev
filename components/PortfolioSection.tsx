@@ -5,51 +5,57 @@ import PexelsImage from './PexelsImage';
 
 export const projects = [
   {
-    id: 'fashion-house',
-    title: 'E-commerce',
-    description: 'A modern fashion e-commerce platform featuring curated collections of men\'s and women\'s clothing, with a clean UI, newsletter integration, and responsive design.',
-    tags: ['E-commerce', 'Web Development', 'UI/UX Design'],
-    link: 'https://myfashionhouse.netlify.app/',
-    image: '/images/projects/ecommerce-platform.jpg',
+    id: 'gratuity-calculator',
+    title: 'Gratuity Calculator',
+    description: 'A user-friendly UAE gratuity calculator for end-of-service benefits calculation.\nFeatures dynamic inputs and real-time calculations with instant updates.\nSupports both resignation and termination scenarios with accurate results.\nIncludes PDF export functionality and detailed breakdown of calculations.',
+    image: '/images/projects/gratuity.jpg',
+    tags: ['Calculator', 'UAE Labor Law', 'Financial Tool'],
+    link: 'https://my-gratuity.netlify.app/',
   },
   {
+    id: 'tic-tac-toe',
+    title: 'Tic Tac Toe Game',
+    description: 'A modern take on the classic Tic Tac Toe game with sleek interface design.\nFeatures both player vs player and AI opponent game modes.\nIncludes smart win detection logic and move validation system.\nEnhanced with smooth animations and interactive game statistics.',
+    image: '/images/projects/tic-tac-toe.png',
+    tags: ['Game Development', 'Web Development', 'SVG Animation'],
+    link: 'https://khurram-tictactoe.netlify.app/',
+  },
+  {
+    id: 'pmi-proof',
+    title: 'PMI Proof of Play',
+    description: 'Professional form application developed for Philip Morris Management Services.\nFeatures dynamic input fields with real-time validation and error checking.\nImplements automated reference number generation and data organization.\nIncludes secure data submission and comprehensive form analytics.',
+    image: '/images/projects/PMI-report.jpg',
+    tags: ['Form Development', 'Business Solutions', 'UI/UX Design'],
+    link: 'https://proof-of-play-form.netlify.app/',
+  },
+  {
+    id: 'finance-platform',
     title: 'Finance Platform',
-    description: 'A comprehensive financial platform offering trading analytics, market insights, and professional courses in Technical Analysis and Derivatives. Features real-time market analysis, advanced charting tools, and secure trading infrastructure.',
+    description: 'Advanced financial platform with comprehensive market analysis tools.\nProvides real-time trading data and interactive chart visualization.\nOffers professional course management and educational resources.\nIncludes secure trading infrastructure and portfolio tracking.',
     image: '/images/projects/finance-platform.jpg',
     tags: ['Finance', 'Trading Analytics', 'Education'],
     link: 'https://taimur-finance.netlify.app/',
   },
   {
+    id: 'neurofeedback',
     title: 'Neurofeedback Research',
-    description: 'A scientific research platform focused on neurofeedback studies, featuring latest publications, mental health insights, and performance research. Built with modern web technologies and academic publishing standards.',
+    description: 'Cutting-edge research platform focused on neurofeedback studies and analysis.\nFeatures comprehensive publication database and research insights.\nProvides interactive data visualization and research metrics.\nBuilt with modern web technologies for optimal academic accessibility.',
     image: '/images/projects/neurofeedback.jpg',
     tags: ['Research', 'Healthcare', 'Academic'],
     link: 'https://arub.netlify.app/',
   },
   {
-    title: 'Food Delivery App',
-    description: 'A food delivery application with real-time tracking and payment integration.',
-    image: '/images/projects/food-delivery.jpg',
-    tags: ['Mobile App', 'UI/UX Design'],
-    link: '#',
+    id: 'fashion-house',
+    title: 'E-commerce',
+    description: 'Modern fashion e-commerce platform with extensive product catalog.\nFeatures seamless shopping experience and secure payment integration.\nIncludes newsletter subscription and customer account management.\nOptimized with responsive design and fast product search functionality.',
+    image: '/images/projects/ecommerce-platform.jpg',
+    tags: ['E-commerce', 'Web Development', 'UI/UX Design'],
+    link: 'https://myfashionhouse.netlify.app/',
   },
   {
-    title: 'AI-Powered Analytics Dashboard',
-    description: 'An intelligent analytics platform that leverages machine learning to provide real-time business insights and predictive analytics.',
-    image: '/images/projects/finance-platform.jpg',
-    tags: ['AI/ML', 'Data Analytics', 'Web Development'],
-    link: '#',
-  },
-  {
-    title: 'Social Media Management Suite',
-    description: 'A comprehensive social media management platform with content scheduling, analytics, and AI-powered engagement optimization.',
-    image: '/images/projects/finance-platform.jpg',
-    tags: ['Social Media', 'Marketing', 'SaaS'],
-    link: '#',
-  },
-  {
+    id: 'virtual-events',
     title: 'Virtual Event Platform',
-    description: 'A feature-rich virtual event platform supporting live streaming, networking rooms, and interactive workshops with real-time collaboration.',
+    description: 'Comprehensive platform for hosting and managing virtual events.\nFeatures high-quality live streaming and interactive workshops.\nIncludes networking rooms with real-time participant interaction.\nSupports multiple concurrent sessions and event analytics tracking.',
     image: '/images/projects/finance-platform.jpg',
     tags: ['Live Streaming', 'Web Development', 'Real-time'],
     link: '#',
@@ -115,7 +121,7 @@ const PortfolioSection = ({ showTitle = true }: PortfolioSectionProps) => {
                 </motion.div>
                 <div className="p-6">
                   <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-                  <p className="text-gray-600 mb-4">{project.description}</p>
+                  <p className="text-gray-600 mb-4 line-clamp-4">{project.description}</p>
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.tags.map((tag) => (
                       <motion.span
@@ -133,7 +139,7 @@ const PortfolioSection = ({ showTitle = true }: PortfolioSectionProps) => {
                     whileHover={{ x: 5 }}
                     transition={{ type: "spring", stiffness: 300 }}
                   >
-                    View Project
+                    Live Demo
                     <motion.span
                       animate={{ x: [0, 5, 0] }}
                       transition={{ repeat: Infinity, duration: 1.5 }}

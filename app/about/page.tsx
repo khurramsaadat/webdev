@@ -41,12 +41,12 @@ export default function About() {
           <div className="relative w-full h-full">
             <PexelsImage
               src="/images/hero/team-collaboration-2.jpg"
-              alt="Our team collaboration"
+          alt="Our team collaboration"
               variant="hero"
-              priority
-            />
+          priority
+        />
           </div>
-          <div className="absolute inset-0 bg-black bg-opacity-60" />
+        <div className="absolute inset-0 bg-black bg-opacity-60" />
         </div>
         <div className="relative z-10 h-full flex flex-col items-center justify-center text-white px-4">
           <h1 className="section-title text-white mb-4">About Us</h1>
@@ -66,10 +66,10 @@ export default function About() {
             viewport={{ once: true }}
           >
             <div className="mb-12">
-              <h2 className="text-2xl font-semibold mb-6">Our Mission</h2>
+            <h2 className="text-2xl font-semibold mb-6">Our Mission</h2>
               <p className="text-gray-600">
                 At CreativeTech, we transform digital visions into exceptional realities. We deliver cutting-edge web development, mobile applications, and UI/UX design solutions that drive business growth. Through technical excellence and creative innovation, we help businesses build meaningful connections with their audience while exceeding expectations at every step.
-              </p>
+            </p>
             </div>
 
             <h2 className="text-2xl font-semibold mb-6">Our Vision & Values</h2>

@@ -134,24 +134,24 @@ const Navbar = () => {
             </div>
             <div className="px-4 py-2 space-y-2">
               {navItems.map((item, i) => (
-                <motion.div
+      <motion.div
                   key={item.name}
                   custom={i}
                   variants={itemVariants}
                   initial="closed"
                   animate="open"
-                >
-                  <Link
-                    href={item.href}
+      >
+            <Link
+              href={item.href}
                     className="block px-4 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 rounded-lg transition-colors"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    {item.name}
-                  </Link>
+              onClick={() => setIsOpen(false)}
+            >
+              {item.name}
+            </Link>
                 </motion.div>
-              ))}
-            </div>
-          </motion.div>
+          ))}
+        </div>
+      </motion.div>
         )}
       </AnimatePresence>
     </nav>

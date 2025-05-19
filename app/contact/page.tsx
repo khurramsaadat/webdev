@@ -35,12 +35,12 @@ export default function Contact() {
           <div className="relative w-full h-full">
             <PexelsImage
               src="/images/hero/contact-us.jpg"
-              alt="Contact us background"
+          alt="Contact us background"
               variant="hero"
-              priority
-            />
+          priority
+        />
           </div>
-          <div className="absolute inset-0 bg-black bg-opacity-60" />
+        <div className="absolute inset-0 bg-black bg-opacity-60" />
         </div>
         <div className="relative z-10 h-full flex flex-col items-center justify-center text-white px-4">
           <h1 className="section-title text-white mb-4">Contact Us</h1>
@@ -60,7 +60,7 @@ export default function Contact() {
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Partner with us for innovative solutions that drive your business forward
           </p>
-        </div>
+      </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <motion.div
@@ -94,7 +94,7 @@ export default function Contact() {
               </svg>
             </div>
             <h3 className="text-xl font-semibold mb-2">Expert Team</h3>
-            <p className="text-gray-600">
+                <p className="text-gray-600">
               Our skilled professionals bring years of experience and dedication to every project we undertake.
             </p>
           </motion.div>

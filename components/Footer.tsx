@@ -40,7 +40,7 @@ const Footer = () => {
                   aria-label={social.label}
                 >
                   <social.icon size={24} />
-                </a>
+              </a>
               ))}
             </div>
           </div>

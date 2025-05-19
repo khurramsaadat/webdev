@@ -19,6 +19,22 @@
 - Updated Mobile Banking App card to showcase Taimur Finance Platform with accurate description and link
 - Updated Corporate Website card to showcase Neurofeedback Research platform with relevant details
 - Changed portfolio grid layout from 2 to 3 columns on large screens
+- Replaced "Social Media Management Suite" project card with "Gratuity Calculator" project in portfolio section
+- Added gratuity.jpg image for the new project card
+- Reordered portfolio projects to new sequence:
+  1. Gratuity Calculator
+  2. Tic Tac Toe Game
+  3. PMI Proof of Play
+  4. Finance Platform
+  5. Neurofeedback Research
+  6. E-commerce
+  7. Virtual Event Platform
+- Added consistent ID properties to all portfolio projects for better tracking and accessibility
+- Updated all portfolio project descriptions to be more concise (max 4 lines)
+- Changed "View Project" button text to "Live Demo" in portfolio cards
+- Added line-clamp-4 class to ensure consistent description height
+- Standardized all portfolio project descriptions to exactly four lines for consistent presentation
+- Updated descriptions to follow a structured format: overview, main features, additional features, and technical highlights
 
 ### Improved
 - Better code organization with shared components
@@ -26,3 +42,11 @@
 - Enhanced user experience with new tab behavior for project links
 - Expanded portfolio with diverse project types and technologies
 - Improved layout density and visual presentation on larger displays
+
+## [2024-03-19]
+
+### Removed
+- Deleted tic-tac-toe.svg file
+
+### Changed
+- Updated Tic Tac Toe game image reference from .svg to .png format in portfolio section

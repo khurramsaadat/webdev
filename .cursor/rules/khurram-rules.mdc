@@ -8,7 +8,6 @@ alwaysApply: true
 - I am using windows 11
 - I am using PowerShell, know this when use command (git add .) as you make PowerShell syntax error.
 - My IDE is cursor
-- Create CHANGELOG.md in root folder and update it with each session's changes, including dates, specific changes and any important notes, track all modifications, document any configuration changes and keep a record of all commands used.
 - Always check the whole code before replying and adding codes. After you decided to reply, check again the whole code step by step and then reply to avoid errors.
 - Always read @codebase
 - Always read the @readme.md file and if missing suggest to make it.
@@ -17,5 +16,8 @@ alwaysApply: true
 - Always remember my inputs and remind me if i make a mistake.
 - Follow the current best practices.
 - Git is main not master.
-- When user mention save, please update CHANGELOG.md and include folder structure including files and push all codes and files to Git and GitHub.
+- Create CHANGELOG.md in root folder and update it with each session's changes, including dates, specific changes and any important notes, track all modifications, document any configuration changes and keep a record of all commands used.
+- When user mentions save, please update CHANGELOG.md and include folder structure including files and push all codes and files to Git and GitHub.
+- When user mentions ??, this means you should ask questions to user before writing any code.
+
 

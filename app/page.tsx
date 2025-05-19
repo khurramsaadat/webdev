@@ -52,26 +52,26 @@ export default function Home() {
       image: '/images/projects/ecommerce-platform.jpg',
     },
     {
-      title: 'Mobile Banking App',
-      description: 'A secure and user-friendly mobile banking application for iOS and Android.',
-      image: '/images/projects/mobile-banking.jpg',
-      tags: ['Mobile App', 'UI/UX Design'],
-      link: '#',
+      title: 'Taimur Finance Platform',
+      description: 'A comprehensive financial platform with real-time market data, trading analytics, and portfolio management.',
+      image: '/images/projects/finance-platform.jpg',
+      tags: ['Finance', 'Web Development', 'Real-time Data'],
+      link: 'https://taimur-finance.netlify.app/',
     },
     {
-      title: 'Corporate Website',
-      description: 'A responsive corporate website with modern design and performance optimization.',
-      image: '/images/projects/corporate-website.jpg',
-      tags: ['Web Development', 'UI/UX Design'],
-      link: '#',
+      title: 'Neurofeedback Research',
+      description: 'A research-focused platform for neurofeedback studies and brain-computer interface applications.',
+      image: '/images/projects/Neurofeedback.jpg',
+      tags: ['Research', 'Web Development', 'Healthcare'],
+      link: 'https://arub.netlify.app/',
     },
     {
-      title: 'Food Delivery App',
-      description: 'A food delivery application with real-time tracking and payment integration.',
-      image: '/images/projects/food-delivery.jpg',
-      tags: ['Mobile App', 'UI/UX Design'],
-      link: '#',
-    },
+      title: 'Tic Tac Toe Game',
+      description: 'A classic Tic Tac Toe game with a modern twist, featuring a sleek SVG-based interface, player vs player mode, and win detection logic.',
+      image: '/images/projects/tic-tac-toe.png',
+      tags: ['Game Development', 'Web Development', 'SVG Animation'],
+      link: 'https://khurram-tictactoe.netlify.app/',
+    }
   ];
 
   const clients = [
@@ -186,6 +186,9 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Portfolio Section */}
+      <PortfolioSection />
+
       {/* Services Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -231,9 +234,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Portfolio Section */}
-      <PortfolioSection />
-
       {/* Clients Section */}
       <section className="py-20 bg-gray-50 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -246,7 +246,7 @@ export default function Home() {
           <div className="relative">
             <div className="flex animate-carousel-mobile md:animate-carousel">
               {clients.map((client) => (
-                <motion.div
+              <motion.div
                   key={client.id || client.name}
                   className="w-[100px] h-[70px] mx-6 relative flex-shrink-0 flex items-center justify-center"
                 >
@@ -260,7 +260,7 @@ export default function Home() {
               ))}
               {/* Duplicate logos for seamless loop */}
               {clients.map((client) => (
-                <motion.div
+                <motion.div 
                   key={`${client.id || client.name}-duplicate`}
                   className="w-[100px] h-[70px] mx-6 relative flex-shrink-0 flex items-center justify-center"
                 >
@@ -269,10 +269,10 @@ export default function Home() {
                     alt={`${client.name} logo`}
                     variant="client"
                     className={`w-auto h-full object-contain ${client.className || ''}`}
-                  />
+                    />
                 </motion.div>
-              ))}
-            </div>
+                    ))}
+                  </div>
           </div>
         </div>
       </section>
