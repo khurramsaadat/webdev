@@ -21,20 +21,25 @@
 - Changed portfolio grid layout from 2 to 3 columns on large screens
 - Replaced "Social Media Management Suite" project card with "Gratuity Calculator" project in portfolio section
 - Added gratuity.jpg image for the new project card
+- Replaced "Virtual Event Platform" project with "Layout Creation" project showcasing DFRE work
+- Added dfre.jpg image for the new Layout Creation project card
 - Reordered portfolio projects to new sequence:
-  1. Gratuity Calculator
-  2. Tic Tac Toe Game
-  3. PMI Proof of Play
-  4. Finance Platform
-  5. Neurofeedback Research
-  6. E-commerce
-  7. Virtual Event Platform
+  1. Layout Creation
+  2. Gratuity Calculator
+  3. Tic Tac Toe Game
+  4. PMI Proof of Play
+  5. Finance Platform
+  6. Neurofeedback Research
+  7. E-commerce
 - Added consistent ID properties to all portfolio projects for better tracking and accessibility
 - Updated all portfolio project descriptions to be more concise (max 4 lines)
 - Changed "View Project" button text to "Live Demo" in portfolio cards
 - Added line-clamp-4 class to ensure consistent description height
 - Standardized all portfolio project descriptions to exactly four lines for consistent presentation
 - Updated descriptions to follow a structured format: overview, main features, additional features, and technical highlights
+- Updated Layout Creation project with new description focusing on Dubai Municipality assets
+- Changed Layout Creation project URL to dfre.netlify.app
+- Updated project tags to reflect Dubai Municipality and DFRE focus
 
 ### Improved
 - Better code organization with shared components

@@ -5,6 +5,14 @@ import PexelsImage from './PexelsImage';
 
 export const projects = [
   {
+    id: 'layout-creation',
+    title: 'Layout Creation',
+    description: 'Layout Factory platform specializing in Dubai Municipality and DFRE design assets.\nComprehensive system for managing DM-6 and DM-3 assets in English and Arabic.\nStreamlined design studio for creating and managing promotional layouts.\nOptimized workflow for Dubai Municipality approval process.',
+    image: '/images/projects/dfre.jpg',
+    tags: ['Layout Design', 'Dubai Municipality', 'DFRE Assets'],
+    link: 'https://dfre.netlify.app/',
+  },
+  {
     id: 'gratuity-calculator',
     title: 'Gratuity Calculator',
     description: 'A user-friendly UAE gratuity calculator for end-of-service benefits calculation.\nFeatures dynamic inputs and real-time calculations with instant updates.\nSupports both resignation and termination scenarios with accurate results.\nIncludes PDF export functionality and detailed breakdown of calculations.',
@@ -51,14 +59,6 @@ export const projects = [
     image: '/images/projects/ecommerce-platform.jpg',
     tags: ['E-commerce', 'Web Development', 'UI/UX Design'],
     link: 'https://myfashionhouse.netlify.app/',
-  },
-  {
-    id: 'virtual-events',
-    title: 'Virtual Event Platform',
-    description: 'Comprehensive platform for hosting and managing virtual events.\nFeatures high-quality live streaming and interactive workshops.\nIncludes networking rooms with real-time participant interaction.\nSupports multiple concurrent sessions and event analytics tracking.',
-    image: '/images/projects/finance-platform.jpg',
-    tags: ['Live Streaming', 'Web Development', 'Real-time'],
-    link: '#',
   },
 ];
 
