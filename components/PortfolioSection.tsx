@@ -24,9 +24,9 @@ export const projects = [
     id: 'tic-tac-toe',
     title: 'Tic Tac Toe Game',
     description: 'A modern take on the classic Tic Tac Toe game with sleek interface design.\nFeatures both player vs player and AI opponent game modes.\nIncludes smart win detection logic and move validation system.\nEnhanced with smooth animations and interactive game statistics.',
-    image: '/images/projects/tic-tac-toe.png',
+    image: '/images/projects/tic-tac-toe.jpg',
     tags: ['Game Development', 'Web Development', 'SVG Animation'],
-    link: 'https://khurram-tictactoe.netlify.app/',
+    link: 'https://khurram-tic-tac-toe.netlify.app/',
   },
   {
     id: 'pmi-proof',
@@ -60,6 +60,14 @@ export const projects = [
     tags: ['E-commerce', 'Web Development', 'UI/UX Design'],
     link: 'https://myfashionhouse.netlify.app/',
   },
+  {
+    id: 'name-place-animal-thing',
+    title: 'Name Place Animal Thing',
+    description: 'A modern take on the classic word game with multiplayer support.\nFeatures real-time scoring and category validation system.\nIncludes word bank and training mode for vocabulary enhancement.\nBuilt with responsive design and smooth animations for optimal gameplay.',
+    image: '/images/projects/name-place.jpg',
+    tags: ['Game Development', 'Educational', 'Multiplayer'],
+    link: 'https://n-place.netlify.app/',
+  }
 ];
 
 interface PortfolioSectionProps {
@@ -78,7 +86,7 @@ const PortfolioSection = ({ showTitle = true }: PortfolioSectionProps) => {
             </p>
           </div>
         )}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, index) => (
             <Link
               key={project.title}
@@ -105,7 +113,7 @@ const PortfolioSection = ({ showTitle = true }: PortfolioSectionProps) => {
                 className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 h-full"
               >
                 <motion.div 
-                  className="relative h-64"
+                  className="relative h-48"
                   whileHover={{ scale: 1.05 }}
                   transition={{ type: "spring", stiffness: 300 }}
                 >
@@ -119,23 +127,23 @@ const PortfolioSection = ({ showTitle = true }: PortfolioSectionProps) => {
                     />
                   </div>
                 </motion.div>
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-                  <p className="text-gray-600 mb-4 line-clamp-4">{project.description}</p>
-                  <div className="flex flex-wrap gap-2 mb-4">
+                <div className="p-4">
+                  <h3 className="text-lg font-semibold mb-2">{project.title}</h3>
+                  <p className="text-sm text-gray-600 mb-3 line-clamp-3">{project.description}</p>
+                  <div className="flex flex-wrap gap-2 mb-3">
                     {project.tags.map((tag) => (
                       <motion.span
                         key={tag}
                         whileHover={{ scale: 1.05 }}
                         transition={{ type: "spring", stiffness: 300 }}
-                        className="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm"
+                        className="bg-gray-100 text-gray-800 px-2 py-1 rounded-full text-xs"
                       >
                         {tag}
                       </motion.span>
                     ))}
                   </div>
                   <motion.div
-                    className="text-primary hover:text-secondary font-medium inline-flex items-center gap-2"
+                    className="text-primary hover:text-secondary font-medium inline-flex items-center gap-1 text-sm"
                     whileHover={{ x: 5 }}
                     transition={{ type: "spring", stiffness: 300 }}
                   >

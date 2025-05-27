@@ -21,7 +21,7 @@ const getImageDimensions = (variant: ImageVariant): { width: number; height: num
     case 'card':
       return { width: 800, height: 600 }; // 4:3 aspect ratio for cards
     case 'grid2':
-      return { width: 960, height: 720 }; // 4:3 aspect ratio for 2-column grid
+      return { width: 960, height: 540 }; // 16:9 aspect ratio for 2-column grid
     case 'grid4':
       return { width: 480, height: 360 }; // 4:3 aspect ratio for 4-column grid
     default:
@@ -57,6 +57,7 @@ const PexelsImage = ({
     width: '100%',
     height: '100%',
     objectFit: 'cover',
+    objectPosition: 'top center',
     ...style
   };
 
