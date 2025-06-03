@@ -21,6 +21,14 @@ export const projects = [
     link: 'https://my-gratuity.netlify.app/',
   },
   {
+    id: 'flappy-bird',
+    title: 'Flappy Bird',
+    description: 'A pixel-perfect web version of the classic Flappy Bird game. Tap to fly, dodge pipes, and challenge your high score! Responsive, fast, and fun for all ages.',
+    image: '/images/projects/flappy-bird.jpg',
+    tags: ['Game Development', 'Web Game', 'Pixel Art'],
+    link: 'https://flappy-birrd.netlify.app/',
+  },
+  {
     id: 'tic-tac-toe',
     title: 'Tic Tac Toe Game',
     description: 'A modern take on the classic Tic Tac Toe game with sleek interface design.\nFeatures both player vs player and AI opponent game modes.\nIncludes smart win detection logic and move validation system.\nEnhanced with smooth animations and interactive game statistics.',

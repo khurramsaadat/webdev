@@ -47,6 +47,7 @@ creative-tech/
 - Added new "Name Place Animal Thing" project card to portfolio section
 - Added name-place.jpg image showing actual game interface for the project card
 - Updated Tic Tac Toe project with new game interface screenshot and corrected URL
+- Added Flappy Bird project card before Tic Tac Toe in the portfolio section, using flappy-bird.jpg and https://flappy-birrd.netlify.app/
 
 ### Changed
 - Updated portfolio card image sizing:
@@ -90,6 +91,7 @@ creative-tech/
 - Changed grid gap from gap-8 to gap-6 for tighter layout
 - Reduced line clamp from 4 to 3 lines for description
 - Made "Live Demo" text and icon gap smaller for better alignment
+- Navbar now visually highlights the active page for both desktop and mobile navigation
 
 ### Improved
 - Better code organization with shared components
@@ -105,3 +107,4 @@ creative-tech/
 
 ### Changed
 - Updated Tic Tac Toe game image reference from .svg to .png format in portfolio section
+- Updated components/PortfolioSection.tsx and components/Navbar.tsx for the above features

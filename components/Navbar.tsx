@@ -4,9 +4,11 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FiMenu, FiX, FiHexagon } from 'react-icons/fi';
+import { usePathname } from 'next/navigation';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
 
   const navItems = [
     { name: 'Home', href: '/' },
@@ -70,7 +72,12 @@ const Navbar = () => {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="text-gray-600 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                  className={
+                    `px-3 py-2 rounded-md text-sm font-medium transition-colors ` +
+                    (pathname === item.href
+                      ? 'bg-primary text-white shadow-md'
+                      : 'text-gray-600 hover:text-primary')
+                  }
                 >
                   {item.name}
                 </Link>
@@ -134,24 +141,29 @@ const Navbar = () => {
             </div>
             <div className="px-4 py-2 space-y-2">
               {navItems.map((item, i) => (
-      <motion.div
+                <motion.div
                   key={item.name}
                   custom={i}
                   variants={itemVariants}
                   initial="closed"
                   animate="open"
-      >
-            <Link
-              href={item.href}
-                    className="block px-4 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 rounded-lg transition-colors"
-              onClick={() => setIsOpen(false)}
-            >
-              {item.name}
-            </Link>
+                >
+                  <Link
+                    href={item.href}
+                    className={
+                      `block px-4 py-2 text-base font-medium rounded-lg transition-colors ` +
+                      (pathname === item.href
+                        ? 'bg-primary text-white shadow-md'
+                        : 'text-gray-700 hover:bg-gray-50')
+                    }
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {item.name}
+                  </Link>
                 </motion.div>
-          ))}
-        </div>
-      </motion.div>
+              ))}
+            </div>
+          </motion.div>
         )}
       </AnimatePresence>
     </nav>
